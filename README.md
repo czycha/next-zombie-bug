@@ -5,31 +5,31 @@
 1. `cd ./old && yarn build && yarn start`
 2. Navigate to `localhost:3000/zombie` on Safari on your iOS device (or simulator).
   1. You should expect to see a page that says "Received ID: zombie" with props:
-    ```json
-    {
-      "id": "zombie",
-      "isOld": true,
-      "isDynamicRoute": true
-    }
-    ```
+      ```json
+      {
+        "id": "zombie",
+        "isOld": true,
+        "isDynamicRoute": true
+      }
+      ```
 3. Close Safari, but don't exit the tab.
 4. `cd ../new && yarn build && yarn start`
 5. On your iOS device, reopen Safari.
   1. You should now see "Received ID: " with no ID provided. This is **not expected.** It should either say "zombie" for the old version of the page of "new-zombie" for the new. The props are:
-    ```json
-    {
-      "isNew": true,
-      "isDynamicRoute": false
-    }
-    ```
+      ```json
+      {
+        "isNew": true,
+        "isDynamicRoute": false
+      }
+      ```
 6. Refresh the page.
   1. You should see "Received ID: new-zombie" with props:
-    ```json
-    {
-      "isNew": true,
-      "isDynamicRoute": false
-    }
-    ```
+      ```json
+      {
+        "isNew": true,
+        "isDynamicRoute": false
+      }
+      ```
 
 ## This is a weird process. What are you simulating?
 
